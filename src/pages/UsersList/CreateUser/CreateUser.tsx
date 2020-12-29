@@ -14,7 +14,7 @@ export const CreateUser: FC = () => {
     const history = useHistory()
     const users = useSelector<RootState, IUsers>(state => state.usersStore.users)
 
-    const lastId = users[users.length - 1].id
+    const newId = users.length ? users[users.length - 1].id + 1 : 1
 
     const Swal = withReactContent(Swal2)
 
@@ -25,7 +25,7 @@ export const CreateUser: FC = () => {
                 submitCallback={values => {
                     dispatch(
                         addUser({
-                            id: lastId + 1,
+                            id: newId,
                             ...values,
                         })
                     )

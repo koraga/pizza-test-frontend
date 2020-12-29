@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
@@ -31,6 +32,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/entry/index.html',
         }),
+        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
     ],
     devServer: {
         historyApiFallback: true,
