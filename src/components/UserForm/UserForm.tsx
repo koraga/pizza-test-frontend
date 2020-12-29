@@ -2,10 +2,10 @@ import React, { FC } from 'react'
 import { Form, Row, Col, Button } from 'react-bootstrap'
 import InputMask from 'react-input-mask'
 import { useFormik } from 'formik'
+import * as Yup from 'yup'
 
 import { IUser } from '@/interfaces/users'
 import { getRoleLabelByKey, validateNumberLength, validateBirthday } from '@/helpers'
-import * as Yup from 'yup'
 
 type Values = {
     name: string

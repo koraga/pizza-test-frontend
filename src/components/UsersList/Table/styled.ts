@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import { Table as TableBS } from 'react-bootstrap'
+
 import { SortType } from '@/hooks/useSortTable'
 
 export const WrapperTable = styled.div`

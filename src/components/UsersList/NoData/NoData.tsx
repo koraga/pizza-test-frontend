@@ -1,4 +1,4 @@
-import React, { FC, ReactElement } from 'react'
+import React, { FC } from 'react'
 import { useDispatch } from 'react-redux'
 import { Button } from 'react-bootstrap'
 
