@@ -73,6 +73,11 @@ export const UserForm: FC<UserFormProps> = ({ user, submitCallback }) => {
                         isValid={!formik.errors.name && formik.touched.name}
                         isInvalid={!!formik.errors.name && formik.touched.name}
                     />
+                    {!!formik.errors.name && (
+                        <Form.Control.Feedback type="invalid">
+                            {formik.errors.name}
+                        </Form.Control.Feedback>
+                    )}
                 </Col>
             </Form.Group>
 
@@ -92,6 +97,11 @@ export const UserForm: FC<UserFormProps> = ({ user, submitCallback }) => {
                         isValid={!formik.errors.phone && formik.touched.phone}
                         isInvalid={!!formik.errors.phone && formik.touched.phone}
                     />
+                    {!!formik.errors.phone && (
+                        <Form.Control.Feedback type="invalid">
+                            {formik.errors.phone}
+                        </Form.Control.Feedback>
+                    )}
                 </Col>
             </Form.Group>
             <Form.Group as={Row} controlId="inputBirthday">
@@ -110,6 +120,11 @@ export const UserForm: FC<UserFormProps> = ({ user, submitCallback }) => {
                         isValid={!formik.errors.birthday && formik.touched.birthday}
                         isInvalid={!!formik.errors.birthday && formik.touched.birthday}
                     />
+                    {!!formik.errors.birthday && (
+                        <Form.Control.Feedback type="invalid">
+                            {formik.errors.birthday}
+                        </Form.Control.Feedback>
+                    )}
                 </Col>
             </Form.Group>
             <Form.Group as={Row} controlId="inputRole">
@@ -135,6 +150,11 @@ export const UserForm: FC<UserFormProps> = ({ user, submitCallback }) => {
                             </option>
                         ))}
                     </Form.Control>
+                    {!!formik.errors.role && (
+                        <Form.Control.Feedback type="invalid">
+                            {formik.errors.role}
+                        </Form.Control.Feedback>
+                    )}
                 </Col>
             </Form.Group>
             <Form.Group as={Row} controlId="inputIsArchive">
